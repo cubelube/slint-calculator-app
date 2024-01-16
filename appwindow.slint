@@ -1,0 +1,316 @@
+import { Button, VerticalBox, TextEdit , GridBox} from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+    title: "Calculator";
+    in-out property<string> textarea: "";
+    callback add_to_text_area(string, string);
+
+    GridLayout {
+
+        text_box := TextEdit {
+            width: 600px;
+            height: 200px;
+            font-size: 20px;
+            read-only: true;
+            text: textarea;
+        }
+        
+        GridLayout {
+
+            row: 1;
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "1";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                one := Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "1") }
+                }
+            }
+            
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "2";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "2") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "3";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "3") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "+";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "+") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "-";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "-") }
+                }
+            }
+        }
+
+        GridLayout {
+
+            row: 2;
+            
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "4";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "4") }
+                }
+            }
+            
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "5";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "5") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "6";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "6") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "*";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "*") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "/";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "/") }
+                }
+            }
+
+        }
+
+        GridLayout {
+
+            row: 3;
+            
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "7";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "7") }
+                }
+            }
+            
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "8";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "8") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "9";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "9") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: ".";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, ".") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+                Text {
+                    text: "Clear";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "C") }
+                }
+            }
+
+        }
+
+        GridLayout {
+            row: 4;
+
+            Rectangle {
+                width: 360px;
+                height: 120px;
+
+                Text {
+                    text: "0";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "0") }
+                }
+            }
+
+            Rectangle {
+                width: 240px;
+                height: 120px;
+
+                Text {
+                    text: "=";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "=") }
+                }
+            }
+        }
+
+    }
+}
