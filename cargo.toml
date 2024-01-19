@@ -9,6 +9,8 @@ description = "Calculator app built with Rust and Slint"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+lazy_static = "1.4.0"
+regex = "1.10.2"
 slint = "1.0"
 
 [build-dependencies]
