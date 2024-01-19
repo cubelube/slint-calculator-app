@@ -13,6 +13,7 @@ export component AppWindow inherits Window {
             font-size: 20px;
             read-only: true;
             text: textarea;
+            
         }
         
         GridLayout {
@@ -276,7 +277,7 @@ export component AppWindow inherits Window {
             row: 4;
 
             Rectangle {
-                width: 360px;
+                width: 120px;
                 height: 120px;
 
                 Text {
@@ -290,6 +291,36 @@ export component AppWindow inherits Window {
                     width: parent.width;
                     height: parent.height;
                     clicked => { add_to_text_area(text-box.text, "0") }
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+
+                Text {
+                    text: "";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+            }
+
+            Rectangle {
+                width: 120px;
+                height: 120px;
+
+                Text {
+                    text: "%";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000000;
+                }
+
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "%") }
                 }
             }
 
