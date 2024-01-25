@@ -1,4 +1,4 @@
-import { Button, VerticalBox, TextEdit , GridBox} from "std-widgets.slint";
+import { Button, VerticalBox, TextEdit , GridBox } from "std-widgets.slint";
 
 export component AppWindow inherits Window {
     title: "Calculator";
@@ -299,10 +299,16 @@ export component AppWindow inherits Window {
                 height: 120px;
 
                 Text {
-                    text: "";
+                    text: "Factor";
                     font-size: 20px;
                     font-weight: 600;
                     color: #000000;
+                }
+
+                Button {
+                    width: parent.width;
+                    height: parent.height;
+                    clicked => { add_to_text_area(text-box.text, "F") }
                 }
             }
 
@@ -342,6 +348,6 @@ export component AppWindow inherits Window {
                 }
             }
         }
-
     }
 }
+
