@@ -7,4 +7,7 @@ Clone the repository and build with [Cargo Bundle](https://github.com/burtonageo
 
 *This currently only supports basic (+, -, \*, /, %) operations*
 
-![Screenshot of app](https://github.com/cubelube/slint-calculator-app/assets/114615759/704de938-8eb8-480f-9d7f-13888bea1b40)
+*Use the factor button like you would an equals button - it can factor integers or expressions*
+
+
+![Screenshot of app](https://github.com/cubelube/slint-calculator-app/assets/114615759/875e7879-637a-43b8-be0e-413ae2dd0fe5)
